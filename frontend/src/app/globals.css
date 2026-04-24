@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0075de;
+  --color-primary-hover: #005bab;
+  --color-background: #ffffff;
+  --color-background-warm: #f6f5f4;
+  --color-text-primary: rgba(0, 0, 0, 0.95);
+  --color-text-secondary: #615d59;
+  --color-text-muted: #a39e98;
+  --color-border-subtle: rgba(0, 0, 0, 0.1);
+  --color-success: #1aae39;
+  --color-info: #2a9d99;
+  --color-warning: #dd5b00;
+  --color-badge-bg: #f2f9ff;
+  --color-badge-text: #097fe8;
+  
+  --shadow-card: 0px 4px 18px rgba(0,0,0,0.04), 0px 2px 8px rgba(0,0,0,0.027), 0px 1px 3px rgba(0,0,0,0.02), 0px 0px 1px rgba(0,0,0,0.01);
+  --shadow-card-hover: 0px 14px 28px rgba(0,0,0,0.04), 0px 23px 52px rgba(0,0,0,0.05);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans antialiased;
+  }
+}
+
+/* Typography Scale */
+@layer utilities {
+  .text-hero {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -2.125px;
+  }
+  .text-hero-secondary {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -1.875px;
+  }
+  .text-section-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -1.5px;
+  }
+  .text-large-heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .text-sub-heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.23;
+    letter-spacing: -0.625px;
+  }
+  .text-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.27;
+    letter-spacing: -0.25px;
+  }
+  .text-body-large {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.125px;
+  }
+  .text-body-regular {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .text-ui-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+  }
+  .text-caption {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+  }
+  .text-badge {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.125px;
+  }
+}
