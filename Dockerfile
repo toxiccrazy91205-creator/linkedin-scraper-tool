@@ -8,10 +8,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxshmfence1 libx11-xcb1 fonts-liberation \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY linkedin/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
     && playwright install chromium
 
-COPY . .
+COPY linkedin/ .
 
-ENTRYPOINT ["python", "server.py"]
+# Run FastAPI instead of MCP server for the frontend to connect
+ENTRYPOINT ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "10000"]
